@@ -1,0 +1,134 @@
+[
+  {
+    "Id": 1,
+    "title": "Follow up with TechCorp on proposal",
+    "description": "Schedule call to discuss pricing and implementation timeline",
+    "dueDate": "2024-02-20T14:00:00Z",
+    "priority": "high",
+    "assignedTo": "John Smith",
+    "relatedTo": {
+      "type": "contact",
+      "id": 1,
+      "name": "Sarah Johnson"
+    },
+    "completed": false
+  },
+  {
+    "Id": 2,
+    "title": "Prepare demo for Design Studio",
+    "description": "Create custom demo showcasing design-specific features",
+    "dueDate": "2024-02-18T10:00:00Z",
+    "priority": "medium",
+    "assignedTo": "Sarah Davis",
+    "relatedTo": {
+      "type": "contact",
+      "id": 2,
+      "name": "Michael Chen"
+    },
+    "completed": false
+  },
+  {
+    "Id": 3,
+    "title": "Send contract to Global Finance",
+    "description": "Final contract review and send for signature",
+    "dueDate": "2024-02-22T09:00:00Z",
+    "priority": "high",
+    "assignedTo": "Mike Johnson",
+    "relatedTo": {
+      "type": "contact",
+      "id": 3,
+      "name": "Emily Rodriguez"
+    },
+    "completed": false
+  },
+  {
+    "Id": 4,
+    "title": "Research Startup Venture requirements",
+    "description": "Understand their technical needs and budget constraints",
+    "dueDate": "2024-02-19T16:00:00Z",
+    "priority": "medium",
+    "assignedTo": "John Smith",
+    "relatedTo": {
+      "type": "contact",
+      "id": 4,
+      "name": "David Kim"
+    },
+    "completed": false
+  },
+  {
+    "Id": 5,
+    "title": "Schedule product walkthrough",
+    "description": "Book 30-minute product demo with RetailPlus team",
+    "dueDate": "2024-02-21T11:00:00Z",
+    "priority": "medium",
+    "assignedTo": "Sarah Davis",
+    "relatedTo": {
+      "type": "contact",
+      "id": 5,
+      "name": "Lisa Thompson"
+    },
+    "completed": false
+  },
+  {
+    "Id": 6,
+    "title": "Submit Healthcare compliance documentation",
+    "description": "Prepare and submit required HIPAA compliance docs",
+    "dueDate": "2024-02-25T17:00:00Z",
+    "priority": "high",
+    "assignedTo": "Mike Johnson",
+    "relatedTo": {
+      "type": "contact",
+      "id": 6,
+      "name": "James Wilson"
+    },
+    "completed": false
+  },
+  {
+    "Id": 7,
+    "title": "Onboard new Education First client",
+    "description": "Schedule kickoff meeting and setup initial training",
+    "dueDate": "2024-02-15T13:00:00Z",
+    "priority": "low",
+    "assignedTo": "John Smith",
+    "relatedTo": {
+      "type": "contact",
+      "id": 7,
+      "name": "Amanda Foster"
+    },
+    "completed": true
+  },
+  {
+    "Id": 8,
+    "title": "Finalize ManufactureMax contract terms",
+    "description": "Negotiate final pricing and service level agreements",
+    "dueDate": "2024-02-23T15:00:00Z",
+    "priority": "high",
+    "assignedTo": "Sarah Davis",
+    "relatedTo": {
+      "type": "contact",
+      "id": 8,
+      "name": "Robert Garcia"
+    },
+    "completed": false
+  },
+  {
+    "Id": 9,
+    "title": "Weekly sales team meeting",
+    "description": "Review pipeline and discuss strategy for Q1 targets",
+    "dueDate": "2024-02-16T09:00:00Z",
+    "priority": "medium",
+    "assignedTo": "John Smith",
+    "relatedTo": null,
+    "completed": true
+  },
+  {
+    "Id": 10,
+    "title": "Update CRM with Q1 forecasts",
+    "description": "Enter updated deal probabilities and close dates",
+    "dueDate": "2024-02-17T16:00:00Z",
+    "priority": "low",
+    "assignedTo": "Sarah Davis",
+    "relatedTo": null,
+    "completed": false
+  }
+]

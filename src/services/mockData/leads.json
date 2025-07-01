@@ -1,0 +1,74 @@
+[
+  {
+    "Id": 1,
+    "contactId": 1,
+    "status": "qualified",
+    "source": "Website Form",
+    "score": 85,
+    "assignedTo": "John Smith",
+    "createdAt": "2024-01-15T09:30:00Z"
+  },
+  {
+    "Id": 2,
+    "contactId": 2,
+    "status": "contacted",
+    "source": "Referral",
+    "score": 72,
+    "assignedTo": "Sarah Davis",
+    "createdAt": "2024-01-18T11:15:00Z"
+  },
+  {
+    "Id": 3,
+    "contactId": 3,
+    "status": "qualified",
+    "source": "Cold Email",
+    "score": 78,
+    "assignedTo": "Mike Johnson",
+    "createdAt": "2024-01-22T13:20:00Z"
+  },
+  {
+    "Id": 4,
+    "contactId": 4,
+    "status": "new",
+    "source": "LinkedIn",
+    "score": 65,
+    "assignedTo": "John Smith",
+    "createdAt": "2024-01-25T15:45:00Z"
+  },
+  {
+    "Id": 5,
+    "contactId": 5,
+    "status": "contacted",
+    "source": "Trade Show",
+    "score": 68,
+    "assignedTo": "Sarah Davis",
+    "createdAt": "2024-01-28T08:30:00Z"
+  },
+  {
+    "Id": 6,
+    "contactId": 6,
+    "status": "new",
+    "source": "Website Form",
+    "score": 55,
+    "assignedTo": "Mike Johnson",
+    "createdAt": "2024-02-01T10:00:00Z"
+  },
+  {
+    "Id": 7,
+    "contactId": 7,
+    "status": "contacted",
+    "source": "Partner Referral",
+    "score": 71,
+    "assignedTo": "John Smith",
+    "createdAt": "2024-02-03T12:15:00Z"
+  },
+  {
+    "Id": 8,
+    "contactId": 8,
+    "status": "qualified",
+    "source": "Cold Call",
+    "score": 82,
+    "assignedTo": "Sarah Davis",
+    "createdAt": "2024-02-05T14:30:00Z"
+  }
+]

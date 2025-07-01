@@ -1,0 +1,90 @@
+[
+  {
+    "Id": 1,
+    "name": "TechCorp Enterprise License",
+    "contactId": 1,
+    "value": 45000,
+    "stage": "proposal",
+    "probability": 75,
+    "expectedCloseDate": "2024-03-15T00:00:00Z",
+    "assignedTo": "John Smith",
+    "status": "active"
+  },
+  {
+    "Id": 2,
+    "name": "Design Studio Subscription",
+    "contactId": 2,
+    "value": 12000,
+    "stage": "negotiation",
+    "probability": 85,
+    "expectedCloseDate": "2024-02-28T00:00:00Z",
+    "assignedTo": "Sarah Davis",
+    "status": "active"
+  },
+  {
+    "Id": 3,
+    "name": "Global Finance Implementation",
+    "contactId": 3,
+    "value": 78000,
+    "stage": "qualified",
+    "probability": 60,
+    "expectedCloseDate": "2024-04-30T00:00:00Z",
+    "assignedTo": "Mike Johnson",
+    "status": "active"
+  },
+  {
+    "Id": 4,
+    "name": "Startup Package",
+    "contactId": 4,
+    "value": 5000,
+    "stage": "new",
+    "probability": 40,
+    "expectedCloseDate": "2024-03-01T00:00:00Z",
+    "assignedTo": "John Smith",
+    "status": "active"
+  },
+  {
+    "Id": 5,
+    "name": "RetailPlus Marketing Suite",
+    "contactId": 5,
+    "value": 25000,
+    "stage": "proposal",
+    "probability": 70,
+    "expectedCloseDate": "2024-03-20T00:00:00Z",
+    "assignedTo": "Sarah Davis",
+    "status": "active"
+  },
+  {
+    "Id": 6,
+    "name": "Healthcare IT Solutions",
+    "contactId": 6,
+    "value": 95000,
+    "stage": "qualified",
+    "probability": 55,
+    "expectedCloseDate": "2024-05-15T00:00:00Z",
+    "assignedTo": "Mike Johnson",
+    "status": "active"
+  },
+  {
+    "Id": 7,
+    "name": "Education Platform License",
+    "contactId": 7,
+    "value": 18000,
+    "stage": "won",
+    "probability": 100,
+    "expectedCloseDate": "2024-02-10T00:00:00Z",
+    "assignedTo": "John Smith",
+    "status": "closed"
+  },
+  {
+    "Id": 8,
+    "name": "Manufacturing Analytics",
+    "contactId": 8,
+    "value": 35000,
+    "stage": "negotiation",
+    "probability": 80,
+    "expectedCloseDate": "2024-02-25T00:00:00Z",
+    "assignedTo": "Sarah Davis",
+    "status": "active"
+  }
+]

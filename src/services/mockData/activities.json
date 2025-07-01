@@ -1,0 +1,201 @@
+[
+  {
+    "Id": 1,
+    "type": "call",
+    "description": "Discovery call with Sarah Johnson to understand TechCorp's requirements",
+    "timestamp": "2024-02-15T14:30:00Z",
+    "userId": "John Smith",
+    "relatedTo": {
+      "type": "contact",
+      "id": 1,
+      "name": "Sarah Johnson"
+    },
+    "metadata": {
+      "duration": "45 minutes",
+      "outcome": "Positive",
+      "nextAction": "Send proposal"
+    }
+  },
+  {
+    "Id": 2,
+    "type": "email",
+    "description": "Sent product demo video to Michael Chen at Innovate Design",
+    "timestamp": "2024-02-15T11:20:00Z",
+    "userId": "Sarah Davis",
+    "relatedTo": {
+      "type": "contact",
+      "id": 2,
+      "name": "Michael Chen"
+    },
+    "metadata": {
+      "subject": "Custom Design Tools Demo",
+      "opened": true,
+      "clickedLinks": 2
+    }
+  },
+  {
+    "Id": 3,
+    "type": "meeting",
+    "description": "Product demonstration meeting with Global Finance team",
+    "timestamp": "2024-02-14T15:00:00Z",
+    "userId": "Mike Johnson",
+    "relatedTo": {
+      "type": "contact",
+      "id": 3,
+      "name": "Emily Rodriguez"
+    },
+    "metadata": {
+      "attendees": 4,
+      "duration": "60 minutes",
+      "demo_completed": true
+    }
+  },
+  {
+    "Id": 4,
+    "type": "note",
+    "description": "Updated contact information for David Kim - new phone number",
+    "timestamp": "2024-02-14T09:15:00Z",
+    "userId": "John Smith",
+    "relatedTo": {
+      "type": "contact",
+      "id": 4,
+      "name": "David Kim"
+    },
+    "metadata": {
+      "field_updated": "phone",
+      "previous_value": "(555) 456-7890",
+      "new_value": "(555) 456-7891"
+    }
+  },
+  {
+    "Id": 5,
+    "type": "deal",
+    "description": "Created new deal 'RetailPlus Marketing Suite' worth $25,000",
+    "timestamp": "2024-02-13T16:45:00Z",
+    "userId": "Sarah Davis",
+    "relatedTo": {
+      "type": "deal",
+      "id": 5,
+      "name": "RetailPlus Marketing Suite"
+    },
+    "metadata": {
+      "deal_value": 25000,
+      "stage": "proposal",
+      "probability": 70
+    }
+  },
+  {
+    "Id": 6,
+    "type": "task",
+    "description": "Completed task: Submit Healthcare compliance documentation",
+    "timestamp": "2024-02-13T13:30:00Z",
+    "userId": "Mike Johnson",
+    "relatedTo": {
+      "type": "task",
+      "id": 6,
+      "name": "Submit Healthcare compliance documentation"
+    },
+    "metadata": {
+      "task_status": "completed",
+      "completion_time": "2024-02-13T13:30:00Z"
+    }
+  },
+  {
+    "Id": 7,
+    "type": "email",
+    "description": "Follow-up email sent to Amanda Foster regarding implementation timeline",
+    "timestamp": "2024-02-13T10:20:00Z",
+    "userId": "John Smith",
+    "relatedTo": {
+      "type": "contact",
+      "id": 7,
+      "name": "Amanda Foster"
+    },
+    "metadata": {
+      "subject": "Education Platform Implementation Timeline",
+      "opened": true,
+      "replied": false
+    }
+  },
+  {
+    "Id": 8,
+    "type": "call",
+    "description": "Negotiation call with Robert Garcia about contract terms",
+    "timestamp": "2024-02-12T14:00:00Z",
+    "userId": "Sarah Davis",
+    "relatedTo": {
+      "type": "contact",
+      "id": 8,
+      "name": "Robert Garcia"
+    },
+    "metadata": {
+      "duration": "30 minutes",
+      "outcome": "Progress made",
+      "nextAction": "Send revised proposal"
+    }
+  },
+  {
+    "Id": 9,
+    "type": "lead",
+    "description": "Lead status updated from 'contacted' to 'qualified' for TechCorp",
+    "timestamp": "2024-02-12T11:30:00Z",
+    "userId": "John Smith",
+    "relatedTo": {
+      "type": "lead",
+      "id": 1,
+      "name": "TechCorp Lead"
+    },
+    "metadata": {
+      "previous_status": "contacted",
+      "new_status": "qualified",
+      "score_change": "+10"
+    }
+  },
+  {
+    "Id": 10,
+    "type": "meeting",
+    "description": "Weekly sales team meeting - Q1 pipeline review",
+    "timestamp": "2024-02-12T09:00:00Z",
+    "userId": "John Smith",
+    "relatedTo": null,
+    "metadata": {
+      "attendees": 8,
+      "duration": "90 minutes",
+      "topics": ["Pipeline review", "Q1 targets", "New prospects"]
+    }
+  },
+  {
+    "Id": 11,
+    "type": "contact",
+    "description": "New contact added: Robert Garcia from ManufactureMax",
+    "timestamp": "2024-02-11T15:20:00Z",
+    "userId": "Sarah Davis",
+    "relatedTo": {
+      "type": "contact",
+      "id": 8,
+      "name": "Robert Garcia"
+    },
+    "metadata": {
+      "source": "Cold outreach",
+      "company": "ManufactureMax",
+      "position": "Plant Manager"
+    }
+  },
+  {
+    "Id": 12,
+    "type": "deal",
+    "description": "Deal stage updated: Education Platform License moved to 'won'",
+    "timestamp": "2024-02-10T16:00:00Z",
+    "userId": "John Smith",
+    "relatedTo": {
+      "type": "deal",
+      "id": 7,
+      "name": "Education Platform License"
+    },
+    "metadata": {
+      "previous_stage": "negotiation",
+      "new_stage": "won",
+      "deal_value": 18000
+    }
+  }
+]

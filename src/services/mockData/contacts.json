@@ -1,0 +1,90 @@
+[
+  {
+    "Id": 1,
+    "name": "Sarah Johnson",
+    "email": "sarah.johnson@techcorp.com", 
+    "phone": "(555) 123-4567",
+    "company": "TechCorp Solutions",
+    "position": "VP of Sales",
+    "tags": ["Enterprise", "Technology", "Hot Lead"],
+    "createdAt": "2024-01-15T09:30:00Z",
+    "updatedAt": "2024-01-20T14:22:00Z"
+  },
+  {
+    "Id": 2,
+    "name": "Michael Chen",
+    "email": "m.chen@innovatedesign.com",
+    "phone": "(555) 234-5678", 
+    "company": "Innovate Design Studio",
+    "position": "Creative Director",
+    "tags": ["Design", "SMB", "Referred"],
+    "createdAt": "2024-01-18T11:15:00Z",
+    "updatedAt": "2024-01-25T16:45:00Z"
+  },
+  {
+    "Id": 3,
+    "name": "Emily Rodriguez",
+    "email": "emily.r@globalfinance.com",
+    "phone": "(555) 345-6789",
+    "company": "Global Finance Inc",
+    "position": "Operations Manager", 
+    "tags": ["Finance", "Enterprise", "Qualified"],
+    "createdAt": "2024-01-22T13:20:00Z",
+    "updatedAt": "2024-01-28T10:30:00Z"
+  },
+  {
+    "Id": 4,
+    "name": "David Kim",
+    "email": "david.kim@startupventure.io",
+    "phone": "(555) 456-7890",
+    "company": "Startup Venture",
+    "position": "CEO",
+    "tags": ["Startup", "Technology", "Warm Lead"],
+    "createdAt": "2024-01-25T15:45:00Z",
+    "updatedAt": "2024-02-01T09:15:00Z"
+  },
+  {
+    "Id": 5,
+    "name": "Lisa Thompson",
+    "email": "lisa.thompson@retailplus.com",
+    "phone": "(555) 567-8901",
+    "company": "RetailPlus",
+    "position": "Marketing Director",
+    "tags": ["Retail", "Marketing", "Contacted"],
+    "createdAt": "2024-01-28T08:30:00Z",
+    "updatedAt": "2024-02-03T14:20:00Z"
+  },
+  {
+    "Id": 6,
+    "name": "James Wilson",
+    "email": "j.wilson@healthcaresolutions.com",
+    "phone": "(555) 678-9012",
+    "company": "Healthcare Solutions",
+    "position": "IT Director",
+    "tags": ["Healthcare", "IT", "Enterprise"],
+    "createdAt": "2024-02-01T10:00:00Z",
+    "updatedAt": "2024-02-05T11:30:00Z"
+  },
+  {
+    "Id": 7,
+    "name": "Amanda Foster",
+    "email": "amanda@educationfirst.org",
+    "phone": "(555) 789-0123",
+    "company": "Education First",
+    "position": "Program Manager",
+    "tags": ["Education", "Non-profit", "Warm Lead"],
+    "createdAt": "2024-02-03T12:15:00Z",
+    "updatedAt": "2024-02-08T16:00:00Z"
+  },
+  {
+    "Id": 8,
+    "name": "Robert Garcia",
+    "email": "robert.garcia@manufacturemax.com",
+    "phone": "(555) 890-1234",
+    "company": "ManufactureMax",
+    "position": "Plant Manager",
+    "tags": ["Manufacturing", "Operations", "Qualified"],
+    "createdAt": "2024-02-05T14:30:00Z",
+    "updatedAt": "2024-02-10T13:45:00Z"
+  }
+]
