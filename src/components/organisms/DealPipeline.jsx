@@ -1,11 +1,13 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
+import { toast } from 'react-toastify'
 import Button from '@/components/atoms/Button'
 import Badge from '@/components/atoms/Badge'
 import ApperIcon from '@/components/ApperIcon'
+import BulkActionToolbar from '@/components/organisms/BulkActionToolbar'
 import { format } from 'date-fns'
 
-const DealPipeline = ({ deals, onUpdateDeal, onEditDeal, onDeleteDeal }) => {
+const DealPipeline = ({ deals, onUpdateDeal, onEditDeal, onDeleteDeal, onBulkUpdate, onBulkDelete }) => {
   const stages = [
     { name: 'New', key: 'new', color: 'info' },
     { name: 'Qualified', key: 'qualified', color: 'primary' },
@@ -14,8 +16,9 @@ const DealPipeline = ({ deals, onUpdateDeal, onEditDeal, onDeleteDeal }) => {
     { name: 'Won', key: 'won', color: 'success' },
     { name: 'Lost', key: 'lost', color: 'error' },
   ]
-
-  const [draggedDeal, setDraggedDeal] = useState(null)
+const [draggedDeal, setDraggedDeal] = useState(null)
+  const [selectedDeals, setSelectedDeals] = useState([])
+  const [isSelectionMode, setIsSelectionMode] = useState(false)
 
   const getDealsByStage = (stage) => {
     return deals.filter(deal => deal.stage === stage)
@@ -48,18 +51,120 @@ const DealPipeline = ({ deals, onUpdateDeal, onEditDeal, onDeleteDeal }) => {
       style: 'currency',
       currency: 'USD',
       minimumFractionDigits: 0,
-    }).format(amount)
+}).format(amount)
   }
 
-  return (
-    <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
-      <div className="flex items-center justify-between mb-6">
-        <h2 className="text-xl font-semibold text-text-primary">Sales Pipeline</h2>
-        <div className="text-sm text-text-secondary">
-          Total Pipeline Value: {formatCurrency(deals.reduce((total, deal) => total + deal.value, 0))}
-        </div>
-      </div>
+  const handleSelectDeal = (deal, selected) => {
+    if (selected) {
+      setSelectedDeals(prev => [...prev, deal])
+    } else {
+      setSelectedDeals(prev => prev.filter(d => d.Id !== deal.Id))
+    }
+  }
 
+  const handleKeyDown = (e) => {
+    if (e.ctrlKey || e.metaKey) {
+      setIsSelectionMode(true)
+    }
+  }
+
+  const handleKeyUp = (e) => {
+    if (!e.ctrlKey && !e.metaKey) {
+      setIsSelectionMode(false)
+    }
+  }
+
+  const isSelected = (dealId) => {
+    return selectedDeals.some(d => d.Id === dealId)
+  }
+
+  const handleBulkDelete = async (dealIds) => {
+    await new Promise(resolve => setTimeout(resolve, 1000))
+    dealIds.forEach(id => onDeleteDeal(id))
+  }
+
+  const handleBulkUpdate = async (dealIds, updateData) => {
+    await new Promise(resolve => setTimeout(resolve, 1000))
+    toast.info('Bulk update functionality would be implemented with backend integration')
+  }
+
+  const handleDealClick = (deal) => {
+    if (isSelectionMode) {
+      handleSelectDeal(deal, !isSelected(deal.Id))
+    } else {
+      onEditDeal(deal)
+    }
+  }
+
+  const updateFields = [
+    {
+      key: 'stage',
+      label: 'Stage',
+      type: 'select',
+      options: [
+        { value: 'new', label: 'New' },
+        { value: 'qualified', label: 'Qualified' },
+        { value: 'proposal', label: 'Proposal' },
+        { value: 'negotiation', label: 'Negotiation' },
+        { value: 'won', label: 'Won' },
+        { value: 'lost', label: 'Lost' }
+      ]
+    },
+    {
+      key: 'assignedTo',
+      label: 'Assigned To',
+      type: 'select',
+      options: [
+        { value: 'john-doe', label: 'John Doe' },
+        { value: 'jane-smith', label: 'Jane Smith' },
+        { value: 'mike-johnson', label: 'Mike Johnson' }
+      ]
+    },
+    {
+      key: 'priority',
+      label: 'Priority',
+      type: 'select',
+      options: [
+        { value: 'high', label: 'High' },
+        { value: 'medium', label: 'Medium' },
+        { value: 'low', label: 'Low' }
+      ]
+    }
+  ]
+
+  useEffect(() => {
+    document.addEventListener('keydown', handleKeyDown)
+    document.addEventListener('keyup', handleKeyUp)
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown)
+      document.removeEventListener('keyup', handleKeyUp)
+    }
+  }, [])
+return (
+    <div className="space-y-4">
+      <BulkActionToolbar
+        selectedItems={selectedDeals}
+        onClearSelection={() => setSelectedDeals([])}
+        onBulkDelete={handleBulkDelete}
+        onBulkUpdate={handleBulkUpdate}
+        entityType="deals"
+        updateFields={updateFields}
+      />
+
+      <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+        <div className="flex items-center justify-between mb-6">
+          <div className="flex items-center space-x-4">
+            <h2 className="text-xl font-semibold text-text-primary">Sales Pipeline</h2>
+            {isSelectionMode && (
+              <Badge variant="info" size="sm" className="animate-pulse">
+                Selection Mode - Click deals to select
+              </Badge>
+            )}
+          </div>
+          <div className="text-sm text-text-secondary">
+            Total Pipeline Value: {formatCurrency(deals.reduce((total, deal) => total + deal.value, 0))}
+          </div>
+        </div>
       <div className="flex space-x-6 overflow-x-auto pb-4">
         {stages.map((stage) => {
           const stageDeals = getDealsByStage(stage.key)
@@ -88,13 +193,16 @@ const DealPipeline = ({ deals, onUpdateDeal, onEditDeal, onDeleteDeal }) => {
               </div>
 
               <div className="space-y-3 min-h-[400px]">
-                {stageDeals.map((deal) => (
+{stageDeals.map((deal) => (
                   <motion.div
                     key={deal.Id}
-                    draggable
+                    draggable={!isSelectionMode}
                     onDragStart={(e) => handleDragStart(e, deal)}
                     whileHover={{ scale: 1.02 }}
-                    className="card cursor-move hover:shadow-md"
+                    className={`card hover:shadow-md transition-colors ${
+                      isSelectionMode ? 'cursor-pointer' : 'cursor-move'
+                    } ${isSelected(deal.Id) ? 'ring-2 ring-primary bg-primary/5' : ''}`}
+                    onClick={() => handleDealClick(deal)}
                   >
                     <div className="flex items-start justify-between mb-3">
                       <h4 className="font-medium text-text-primary text-sm">
@@ -152,6 +260,7 @@ const DealPipeline = ({ deals, onUpdateDeal, onEditDeal, onDeleteDeal }) => {
             </div>
           )
         })}
+</div>
       </div>
     </div>
   )
