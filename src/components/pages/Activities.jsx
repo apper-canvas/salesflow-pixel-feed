@@ -70,17 +70,19 @@ const Activities = () => {
       filtered = filtered.filter(activity => {
         const activityDate = new Date(activity.timestamp)
         
-        switch (filterDate) {
+switch (filterDate) {
           case 'today':
             return activityDate >= today
-          case 'week':
+          case 'week': {
             const weekAgo = new Date(today)
             weekAgo.setDate(weekAgo.getDate() - 7)
             return activityDate >= weekAgo
-          case 'month':
+          }
+          case 'month': {
             const monthAgo = new Date(today)
             monthAgo.setMonth(monthAgo.getMonth() - 1)
             return activityDate >= monthAgo
+          }
           default:
             return true
         }
