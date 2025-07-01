@@ -3,11 +3,11 @@ import contactsData from '../mockData/contacts.json'
 class ContactService {
   constructor() {
     this.contacts = [...contactsData]
-    this.delay = 300 // Realistic API delay
+this.delayMs = 300 // Realistic API delay
   }
 
   async delay() {
-    return new Promise(resolve => setTimeout(resolve, this.delay))
+    return new Promise(resolve => setTimeout(resolve, this.delayMs))
   }
 
   async getAll() {

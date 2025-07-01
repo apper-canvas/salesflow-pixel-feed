@@ -3,11 +3,11 @@ import tasksData from '../mockData/tasks.json'
 class TaskService {
   constructor() {
     this.tasks = [...tasksData]
-    this.delay = 300
+this.delayMs = 300
   }
 
   async delay() {
-    return new Promise(resolve => setTimeout(resolve, this.delay))
+    return new Promise(resolve => setTimeout(resolve, this.delayMs))
   }
 
   async getAll() {

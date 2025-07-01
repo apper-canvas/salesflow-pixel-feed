@@ -3,11 +3,11 @@ import dealsData from '../mockData/deals.json'
 class DealService {
   constructor() {
     this.deals = [...dealsData]
-    this.delay = 300
+this.delayMs = 300
   }
 
   async delay() {
-    return new Promise(resolve => setTimeout(resolve, this.delay))
+    return new Promise(resolve => setTimeout(resolve, this.delayMs))
   }
 
   async getAll() {
